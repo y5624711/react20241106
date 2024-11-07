@@ -1,5 +1,5 @@
 import React from "react";
-import { HStack, Input, Textarea } from "@chakra-ui/react";
+import { HStack, Icon, Input, Textarea } from "@chakra-ui/react";
 import { Field } from "../components/ui/field.jsx";
 import { Checkbox } from "../components/ui/checkbox.jsx";
 import { HiOutlinePlus } from "react-icons/hi";
@@ -10,18 +10,65 @@ import {
   RadioCardLabel,
   RadioCardRoot,
 } from "../components/ui/radio-card.jsx";
+import { FaApplePay, FaPaypal } from "react-icons/fa6";
+import { SiKakao, SiNaver, SiSamsungpay } from "react-icons/si";
 
 function MyApp28(props) {
   return (
     <div style={{ margin: "10px" }}>
+      <h5>icons</h5>
+      <FaApplePay />
+      <FaPaypal />
+      <SiSamsungpay />
+      <SiKakao />
+      <SiNaver />
+      <span style={{ fontSize: "3em", color: "green" }}>
+        <SiNaver />
+      </span>
       <h5>radio card</h5>
       <RadioCardRoot>
         <RadioCardLabel>결제 수단</RadioCardLabel>
         <HStack>
-          <RadioCardItem indicator={false} value={1} label="Apple Pay" />
-          <RadioCardItem indicator={false} value={2} label="Samsung Pay" />
-          <RadioCardItem indicator={false} value={3} label="Naver Pay" />
-          <RadioCardItem indicator={false} value={4} label="Kakao Pay" />
+          <RadioCardItem
+            icon={
+              <Icon fontSize="2xl">
+                <FaApplePay />
+              </Icon>
+            }
+            indicator={false}
+            value={1}
+            label="Apple Pay"
+          />
+          <RadioCardItem
+            icon={
+              <Icon fontSize="2xl">
+                <SiSamsungpay />
+              </Icon>
+            }
+            indicator={false}
+            value={2}
+            label="Samsung Pay"
+          />
+          <RadioCardItem
+            icon={
+              <Icon fontSize="2xl">
+                <SiNaver />
+              </Icon>
+            }
+            indicator={false}
+            value={3}
+            label="Naver Pay"
+          />
+          <RadioCardItem
+            icon={
+              <Icon fontSize="2xl">
+                <SiKakao />
+              </Icon>
+            }
+            indicator={false}
+            value={4}
+            label="Kakao Pay"
+          />
         </HStack>
       </RadioCardRoot>
       <h5>switch</h5>
