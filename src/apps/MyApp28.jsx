@@ -5,7 +5,8 @@ import { Field } from "../components/ui/field.jsx";
 function MyApp28(props) {
   return (
     <div style={{ margin: "10px" }}>
-      <Textarea placeholder="자기소개"></Textarea>
+      <hr />
+      <Textarea placeholder="자기소개 1000자 제한" variant="flushed"></Textarea>
       <hr />
       <Field label="Email" required helperText="이메일을 입력해주세요.">
         <Input />
