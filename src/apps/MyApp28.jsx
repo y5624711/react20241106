@@ -1,13 +1,32 @@
 import React from "react";
-import { Input, Textarea } from "@chakra-ui/react";
+import { HStack, Input, Textarea } from "@chakra-ui/react";
 import { Field } from "../components/ui/field.jsx";
 import { Checkbox } from "../components/ui/checkbox.jsx";
 import { HiOutlinePlus } from "react-icons/hi";
 import { Radio, RadioGroup } from "../components/ui/radio.jsx";
+import { Switch } from "../components/ui/switch.jsx";
+import {
+  RadioCardItem,
+  RadioCardLabel,
+  RadioCardRoot,
+} from "../components/ui/radio-card.jsx";
 
 function MyApp28(props) {
   return (
     <div style={{ margin: "10px" }}>
+      <h5>radio card</h5>
+      <RadioCardRoot>
+        <RadioCardLabel>결제 수단</RadioCardLabel>
+        <HStack>
+          <RadioCardItem indicator={false} value={1} label="Apple Pay" />
+          <RadioCardItem indicator={false} value={2} label="Samsung Pay" />
+          <RadioCardItem indicator={false} value={3} label="Naver Pay" />
+          <RadioCardItem indicator={false} value={4} label="Kakao Pay" />
+        </HStack>
+      </RadioCardRoot>
+      <h5>switch</h5>
+      <Switch>동의</Switch>
+      <Switch variant="raised">동의</Switch>
       <h5>radio button</h5>
       <RadioGroup>
         <Radio value={1}>option1</Radio>
