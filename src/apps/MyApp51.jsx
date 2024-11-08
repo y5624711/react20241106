@@ -5,6 +5,7 @@ import { Box, Input } from "@chakra-ui/react";
 const MessageContext = createContext("");
 const UpdateMessageContext = createContext(null);
 
+//context로 prop drilling 없이 데이터 전달
 function MyApp51(props) {
   const [message, setMessage] = useState("");
   const updateMessage = (message) => {
