@@ -11,8 +11,8 @@ function MyApp62(props) {
             id: 1,
             name: "iphone",
             available: true,
-            shops: [],
-            attribute: {},
+            shops: ["코스트코", "월마트", "아마존"],
+            attribute: { name: "제조회사", value: "엔비디아" },
           });
         }}
       >
