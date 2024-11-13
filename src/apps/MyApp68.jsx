@@ -13,6 +13,26 @@ function MyApp68(props) {
 
       <Button
         onClick={() => {
+          axios
+            .get("/api/main7/sub12")
+            .then((res) => res.data)
+            .then((data) => console.log(data))
+            //200번대가 아니면 catch 로 받을 수 있음
+            .catch((error) => {
+              console.log("200번대 아님");
+              console.log(error);
+              console.log(error.response.status); //상태코드
+              console.log(error.response.data); //응답본문
+              console.log(error.response.data.name); //응답본문 속성
+              console.log(error.response.data.age); //응답본문 속성
+            });
+        }}
+      >
+        405 응답
+      </Button>
+
+      <Button
+        onClick={() => {
           axios.get("/api/main7/sub11");
         }}
       >
